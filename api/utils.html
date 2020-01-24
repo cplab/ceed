@@ -1,0 +1,265 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Utilities &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="graphics/api.html" />
+    <link rel="prev" title="Video Player" href="player.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/apps.html">Ceed Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">CEED Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">The Ceed API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ceed.html">Ceed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/analysis.html">Ceed data analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analysis/merge_data.html">Ceed-MCS data merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function/function.html">Function Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function/function_plugin.html">Function plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function/widgets.html">Function Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape/shape.html">Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shape/widgets.html">Shape Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage/stage.html">Stages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stage/widgets.html">Stage widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/view.html">Projector View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/view_widgets.html">Viewer widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/controller.html">View Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/main.html">Ceed View App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storage/controller.html">Storage Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="player.html">Video Player</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graphics/graphics.html">Graphcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api.html">The Ceed API</a> &raquo;</li>
+        
+      <li>Utilities</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-ceed.utils"></span><div class="section" id="utilities">
+<h1>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline">¶</a></h1>
+<p>Utilities used in <a class="reference internal" href="ceed.html#module-ceed" title="ceed"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed</span></code></a>.</p>
+<dl class="function">
+<dt id="ceed.utils.fix_name">
+<code class="sig-prename descclassname">ceed.utils.</code><code class="sig-name descname">fix_name</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">*names</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.utils.fix_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fixes the name so that it is unique among the names in <code class="docutils literal notranslate"><span class="pre">names</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>name</cite>: str</dt><dd><p>A name of something</p>
+</dd>
+<dt><cite>*names</cite>: iterables of strings</dt><dd><p>Positional argument, where each is a iterable of strings among
+which we ensure that the returned name is unique.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A string that is unique among all the <code class="docutils literal notranslate"><span class="pre">names</span></code>, but is similar to
+<code class="docutils literal notranslate"><span class="pre">name</span></code>. We append a integer to make it unique.</p>
+</dd>
+</dl>
+<p>E.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fix_name</span><span class="p">(</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;toll&#39;</span><span class="p">,</span> <span class="s1">&#39;foll&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bole&#39;</span><span class="p">,</span> <span class="s1">&#39;cole&#39;</span><span class="p">])</span>
+<span class="go">&#39;troll&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fix_name</span><span class="p">(</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="s1">&#39;toll&#39;</span><span class="p">,</span> <span class="s1">&#39;foll&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bole&#39;</span><span class="p">,</span> <span class="s1">&#39;cole&#39;</span><span class="p">])</span>
+<span class="go">&#39;troll-2&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fix_name</span><span class="p">(</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;troll-2&#39;</span><span class="p">,</span> <span class="s1">&#39;toll&#39;</span><span class="p">,</span> <span class="s1">&#39;foll&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bole&#39;</span><span class="p">,</span> <span class="s1">&#39;cole&#39;</span><span class="p">])</span>
+<span class="go">&#39;troll&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fix_name</span><span class="p">(</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;troll&#39;</span><span class="p">,</span> <span class="s1">&#39;troll-2&#39;</span><span class="p">,</span> <span class="s1">&#39;toll&#39;</span><span class="p">,</span> <span class="s1">&#39;foll&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;bole&#39;</span><span class="p">,</span> <span class="s1">&#39;cole&#39;</span><span class="p">])</span>
+<span class="go">&#39;troll-3&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="graphics/api.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="player.html" class="btn btn-neutral float-left" title="Video Player" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

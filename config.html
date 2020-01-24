@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>CEED Config &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Microscope optics" href="optics/optics.html" />
+    <link rel="prev" title="Projector test app" href="apps/projector_io.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/apps.html">Ceed Apps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CEED Config</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#view">view</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#serializer">serializer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#player">player</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#video-recorder">video_recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#thor">thor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ptgray">ptgray</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#network-client">network_client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#image-file-recorder">image_file_recorder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ffmpeg">ffmpeg</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#function">function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data">data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/api.html">The Ceed API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>CEED Config</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/config.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ceed-config">
+<h1>CEED Config<a class="headerlink" href="#ceed-config" title="Permalink to this headline">¶</a></h1>
+<p>The following are the configuration options provided by the app. It can be configured by changing appropriate values in the <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file. The options default to the default value in the classes configurable by these options.</p>
+<dl class="simple">
+<dt><cite>inspect</cite>: False</dt><dd><p>Enables GUI inspection. If True, it is activated by hitting ctrl-e in
+the GUI.</p>
+</dd>
+</dl>
+<p><cite>last_directory</cite>: “~”</p>
+<div class="section" id="view">
+<h2>view<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><cite>LED_mode</cite>: “RGB”</dt><dd><p>The LED mode the projector is set to during the experiment.
+Its value is from the <code class="xref py py-attr docutils literal notranslate"><span class="pre">led_modes</span></code>.</p>
+</dd>
+<dt><cite>LED_mode_idle</cite>: “RGB”</dt><dd><p>The LED mode the projector is set to before/after the experiment.
+Its value is from the <code class="xref py py-attr docutils literal notranslate"><span class="pre">led_modes</span></code>.</p>
+</dd>
+</dl>
+<p><cite>cam_transform</cite>: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0), (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0))</p>
+<p><cite>flip_camera</cite>: False</p>
+<p><cite>flip_projector</cite>: True</p>
+<dl class="simple">
+<dt><cite>frame_rate</cite>: 120.0</dt><dd><p>The frame rate at which the data is played. This should match the
+currently selected monitor’s refresh rate.</p>
+</dd>
+<dt><cite>fullscreen</cite>: True</dt><dd><p>Whether the second window should run in fullscreen mode. In fullscreen
+mode the window has no borders.</p>
+</dd>
+</dl>
+<p><cite>mea_diameter</cite>: 3</p>
+<p><cite>mea_num_cols</cite>: 12</p>
+<p><cite>mea_num_rows</cite>: 12</p>
+<p><cite>mea_pitch</cite>: 20</p>
+<p><cite>mea_transform</cite>: ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0), (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0))</p>
+<p><cite>mirror_mea</cite>: True</p>
+<dl class="simple">
+<dt><cite>output_count</cite>: True</dt><dd><p>Whether the corner pixel is used to output frame information on the
+PROPixx controller IO pot. If True,
+<a class="reference internal" href="api/storage/controller.html#ceed.storage.controller.DataSerializerBase" title="ceed.storage.controller.DataSerializerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.storage.controller.DataSerializerBase</span></code></a> is used to set the 24
+bits of the corner pixel.</p>
+</dd>
+</dl>
+<p><cite>pad_to_stage_handshake</cite>: True</p>
+<dl class="simple">
+<dt><cite>screen_height</cite>: 1080</dt><dd><p>The screen height on which the data is played. This is the full-screen
+size.</p>
+</dd>
+<dt><cite>screen_offset_x</cite>: 0</dt><dd><p>When there are multiple monitors, the window on which the data is played
+is controlled by the position of the screen. E.g. to set it on the right
+screen of two screens, each 1920 pixel wide and with the main screen being
+on the left. Then the <code class="xref py py-attr docutils literal notranslate"><span class="pre">screen_offset_x</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">1920</span></code>.</p>
+</dd>
+<dt><cite>screen_width</cite>: 1920</dt><dd><p>The screen width on which the data is played. This is the full-screen
+size.</p>
+</dd>
+<dt><cite>use_software_frame_rate</cite>: False</dt><dd><p>Depending on the GPU, the software is unable to render faster than the
+GPU refresh rate. In that case, <code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code>, should match the value
+that the GPU is playing at and this should be False.
+If the GPU isn’t forcing a frame rate. Then this should be True and
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code> should be the desired frame rate.
+One can tell whether the GPU is forcing a frame rate by setting
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code> to a large value and setting
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">use_software_frame_rate</span></code> to False and seeing what the resultant
+frame rate is. If it isn’t capped at some value, e.g. 120Hz, it means that
+the GPU isn’t forcing it.</p>
+</dd>
+<dt><cite>video_mode</cite>: “RGB”</dt><dd><p>The current video mode from the <code class="xref py py-attr docutils literal notranslate"><span class="pre">video_modes</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="serializer">
+<h2>serializer<a class="headerlink" href="#serializer" title="Permalink to this headline">¶</a></h2>
+<p><cite>clock_idx</cite>: 2</p>
+<p><cite>count_indices</cite>: [19, 20]</p>
+<p><cite>counter_bit_width</cite>: 32</p>
+<p><cite>projector_to_aquisition_map</cite>: {2: 0, 3: 1, 4: 2, 10: 3, 11: 4, 12: 5, 18: 6, 19: 7, 20: 8}</p>
+<p><cite>short_count_indices</cite>: [3, 4, 10, 11, 12, 18]</p>
+</div>
+<div class="section" id="player">
+<h2>player<a class="headerlink" href="#player" title="Permalink to this headline">¶</a></h2>
+<p><cite>player_name</cite>: “ffmpeg”</p>
+<div class="section" id="video-recorder">
+<h3>video_recorder<a class="headerlink" href="#video-recorder" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>estimate_record_rate</cite>: False</dt><dd><p>Whether to use <a class="reference external" href="https://matham.github.io/cpl_media/api/player.html#cpl_media.player.BasePlayer.real_rate" title="(in CPL_Media)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">cpl_media.player.BasePlayer.real_rate</span></code></a> for the
+recorder frame rate, as opposed to the one initially provided by the
+player.</p>
+</dd>
+<dt><cite>metadata_record</cite>: None</dt><dd><p>(internal) Describes the video metadata of the recorder. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>record_directory</cite>: “/home/runner”</dt><dd><p>The directory into which videos should be saved.</p>
+</dd>
+<dt><cite>record_fname</cite>: “video{}.mkv”</dt><dd><p>The filename to be used to record the next video.
+If <code class="docutils literal notranslate"><span class="pre">{}</span></code> is present in the filename, it’ll be replaced with the value of
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">record_fname_count</span></code> which auto increments after every video, when
+used. We use Python’s <code class="docutils literal notranslate"><span class="pre">format</span></code> machinery for this.</p>
+</dd>
+<dt><cite>record_fname_count</cite>: 0</dt><dd><p>A counter that auto increments by one after every recorded video.
+Used to give unique filenames for each video file. See
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">record_fname</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="thor">
+<h3>thor<a class="headerlink" href="#thor" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>binning_x</cite>: 0</dt><dd><p>The x binning value to use.</p>
+</dd>
+<dt><cite>binning_x_range</cite>: [0, 0]</dt><dd><p>The supported exposure range.</p>
+</dd>
+<dt><cite>binning_y</cite>: 0</dt><dd><p>The y binning value to use.</p>
+</dd>
+<dt><cite>binning_y_range</cite>: [0, 0]</dt><dd><p>The supported exposure range.</p>
+</dd>
+<dt><cite>black_level</cite>: 0</dt><dd><p>The black level value to use.</p>
+</dd>
+<dt><cite>black_level_range</cite>: [0, 100]</dt><dd><p>The supported exposure range.</p>
+</dd>
+<dt><cite>color_gain</cite>: [1, 1, 1]</dt><dd><p>The color gain for each red, green, and blue channel.</p>
+</dd>
+<dt><cite>exposure_ms</cite>: 0</dt><dd><p>The exposure value in ms to use.</p>
+</dd>
+<dt><cite>exposure_range</cite>: [0, 100]</dt><dd><p>The supported exposure range in ms.</p>
+</dd>
+<dt><cite>frame_queue_size</cite>: 1</dt><dd><p>The max number of image frames to be allowed on the camera’s hardware
+queue. Once exceeded, the frames are dropped.</p>
+</dd>
+<dt><cite>freq</cite>: “20 MHz”</dt><dd><p>The frequency to use.</p>
+</dd>
+<dt><cite>gain</cite>: 0</dt><dd><p>The gain value to use.</p>
+</dd>
+<dt><cite>gain_range</cite>: [0, 100]</dt><dd><p>The supported exposure range.</p>
+</dd>
+<dt><cite>metadata_play</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>metadata_play_used</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player that is
+actually used by the player. This must be set before recorders may allow
+recording the player.
+Depending on the metadata needed by the recorder, it may refuse to
+record until the needed metadata is given.
+Read only.</p>
+</dd>
+<dt><cite>num_queued_frames</cite>: 0</dt><dd><p>The number of image frames currently on the camera’s hardware queue.</p>
+</dd>
+<dt><cite>roi_height</cite>: 0</dt><dd><p>The height after the y start position of the ROI in pixels, to use.</p>
+</dd>
+<dt><cite>roi_width</cite>: 0</dt><dd><p>The width after the x start position of the ROI in pixels, to use.</p>
+</dd>
+<dt><cite>roi_x</cite>: 0</dt><dd><p>The x start position of the ROI in pixels.</p>
+</dd>
+<dt><cite>roi_y</cite>: 0</dt><dd><p>The y start position of the ROI in pixels.</p>
+</dd>
+<dt><cite>sensor_size</cite>: [0, 0]</dt><dd><p>The size of the sensor in pixels.</p>
+</dd>
+<dt><cite>serial</cite>: “”</dt><dd><p>The serial number of the camera that will be opened.</p>
+</dd>
+<dt><cite>serials</cite>: []</dt><dd><p>The list of serial numbers representing the cameras available.</p>
+</dd>
+<dt><cite>supported_freqs</cite>: [‘20 MHz’]</dt><dd><p>The supported frequencies.</p>
+</dd>
+<dt><cite>supported_taps</cite>: [‘1’]</dt><dd><p>The supported taps.</p>
+</dd>
+<dt><cite>supported_triggers</cite>: [‘SW Trigger’, ‘HW Trigger’]</dt><dd><p>The trigger types supported by the camera.</p>
+</dd>
+<dt><cite>supports_color</cite>: False</dt><dd><p>Whether the camera supports color.</p>
+</dd>
+<dt><cite>taps</cite>: “1”</dt><dd><p>The tap to use.</p>
+</dd>
+<dt><cite>trigger_count</cite>: 0</dt><dd><p>The number of frames to capture in response to the trigger.</p>
+</dd>
+<dt><cite>trigger_type</cite>: “SW Trigger”</dt><dd><p>The trigger type of the camera to use.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="ptgray">
+<h3>ptgray<a class="headerlink" href="#ptgray" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>brightness</cite>: {}</dt><dd><p>The camera options for the brightness setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>cam_config_opts</cite>: {‘fmt’: ‘yuv422’}</dt><dd><p>The configuration options used to configure the camera after opening.
+This are internal and can only be set by the internal thread once
+initially set by config.</p>
+</dd>
+<dt><cite>exposure</cite>: {}</dt><dd><p>The camera options for the exposure setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>frame_rate</cite>: {}</dt><dd><p>The camera options for the frame_rate setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>gain</cite>: {}</dt><dd><p>The camera options for the gain setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>gamma</cite>: {}</dt><dd><p>The camera options for the gamma setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>hue</cite>: {}</dt><dd><p>The camera options for the hue setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>ip</cite>: “”</dt><dd><p>The IP address of the camera to open. Either <code class="xref py py-attr docutils literal notranslate"><span class="pre">ip</span></code> or
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">serial</span></code> must be provided.</p>
+</dd>
+<dt><cite>iris</cite>: {}</dt><dd><p>The camera options for the iris setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>metadata_play</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>metadata_play_used</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player that is
+actually used by the player. This must be set before recorders may allow
+recording the player.
+Depending on the metadata needed by the recorder, it may refuse to
+record until the needed metadata is given.
+Read only.</p>
+</dd>
+<dt><cite>mirror</cite>: False</dt><dd><p>Whether the camera is mirrored. Read only.</p>
+</dd>
+<dt><cite>pan</cite>: {}</dt><dd><p>The camera options for the pan setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>saturation</cite>: {}</dt><dd><p>The camera options for the saturation setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>serial</cite>: 0</dt><dd><p>The serial number of the camera to open. Either <code class="xref py py-attr docutils literal notranslate"><span class="pre">ip</span></code> or
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">serial</span></code> must be provided.</p>
+</dd>
+<dt><cite>sharpness</cite>: {}</dt><dd><p>The camera options for the sharpness setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>shutter</cite>: {}</dt><dd><p>The camera options for the shutter setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+<dt><cite>tilt</cite>: {}</dt><dd><p>The camera options for the tilt setting.
+This may only be set by calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">ask_cam_option_config()</span></code>, not
+set directly.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="network-client">
+<h3>network_client<a class="headerlink" href="#network-client" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>metadata_play</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>metadata_play_used</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player that is
+actually used by the player. This must be set before recorders may allow
+recording the player.
+Depending on the metadata needed by the recorder, it may refuse to
+record until the needed metadata is given.
+Read only.</p>
+</dd>
+<dt><cite>port</cite>: 0</dt><dd><p>The server port that broadcasts the data.</p>
+</dd>
+<dt><cite>server</cite>: “”</dt><dd><p>The server address that broadcasts the data.</p>
+</dd>
+<dt><cite>timeout</cite>: 0.01</dt><dd><p>How long to wait before timing out when reading data before checking the
+queue for other requests.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="image-file-recorder">
+<h3>image_file_recorder<a class="headerlink" href="#image-file-recorder" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>compression</cite>: “raw”</dt><dd><p>Whether to compress when <code class="xref py py-attr docutils literal notranslate"><span class="pre">extension</span></code> is <cite>tiff</cite>. Can be one of
+<code class="docutils literal notranslate"><span class="pre">'raw',</span> <span class="pre">'lzw',</span> <span class="pre">'zip'</span></code>.</p>
+</dd>
+<dt><cite>extension</cite>: “tiff”</dt><dd><p>The extension of the images being saved.</p>
+</dd>
+<dt><cite>metadata_record</cite>: None</dt><dd><p>(internal) Describes the video metadata of the recorder. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>record_directory</cite>: “/home/runner”</dt><dd><p>The directory into which videos should be saved.</p>
+</dd>
+<dt><cite>record_prefix</cite>: “<a href="#id1"><span class="problematic" id="id2">image_</span></a>”</dt><dd><p>The prefix to the filename of the images being saved.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="ffmpeg">
+<h3>ffmpeg<a class="headerlink" href="#ffmpeg" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt><cite>dshow_filename</cite>: “”</dt><dd><p>The name of the dshow camera to open.</p>
+</dd>
+<dt><cite>dshow_opt</cite>: “”</dt><dd><p>The camera options associated with <code class="xref py py-attr docutils literal notranslate"><span class="pre">dshow_true_filename</span></code> when
+dshow is used.</p>
+</dd>
+<dt><cite>dshow_rate</cite>: 0</dt><dd><p>The frame rate to request from the dshow camera.</p>
+</dd>
+<dt><cite>dshow_true_filename</cite>: “”</dt><dd><p>The real and complete filename of the direct show (webcam) device.</p>
+</dd>
+<dt><cite>file_fmt</cite>: “”</dt><dd><p>The format used to play the video. Can be empty or a format e.g.
+<code class="docutils literal notranslate"><span class="pre">mjpeg</span></code> for webcams.</p>
+</dd>
+<dt><cite>icodec</cite>: “”</dt><dd><p>The codec used to open the video stream with if it needs to be
+specified for the camera.</p>
+</dd>
+<dt><cite>metadata_play</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player. This is
+the requested format, or best guess of the metadata.
+Read only.</p>
+</dd>
+<dt><cite>metadata_play_used</cite>: None</dt><dd><p>(internal) Describes the video metadata of the video player that is
+actually used by the player. This must be set before recorders may allow
+recording the player.
+Depending on the metadata needed by the recorder, it may refuse to
+record until the needed metadata is given.
+Read only.</p>
+</dd>
+<dt><cite>play_filename</cite>: “”</dt><dd><p>The filename of the media being played. Can be e.g. a filename etc.</p>
+</dd>
+<dt><cite>use_dshow</cite>: True</dt><dd><p>Whether we use dshow - i.e. USB webcams, or normal media sources.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="function">
+<h2>function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="data">
+<h2>data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p><cite>backup_interval</cite>: 5.0</p>
+<p><cite>compression</cite>: “Auto”</p>
+<p><cite>root_path</cite>: “”</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="optics/optics.html" class="btn btn-neutral float-right" title="Microscope optics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="apps/projector_io.html" class="btn btn-neutral float-left" title="Projector test app" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

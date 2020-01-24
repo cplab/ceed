@@ -1,0 +1,343 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Optics App &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Projector test app" href="projector_io.html" />
+    <link rel="prev" title="Ceed App" href="main.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="apps.html">Ceed Apps</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="main.html">Ceed App</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Optics App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projector_io.html">Projector test app</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">CEED Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/api.html">The Ceed API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="apps.html">Ceed Apps</a> &raquo;</li>
+        
+      <li>Optics App</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apps/optics_app.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-ceed.tools.optics"></span><div class="section" id="optics-app">
+<h1>Optics App<a class="headerlink" href="#optics-app" title="Permalink to this headline">¶</a></h1>
+<p>App to help designs the a lens system, such as used by the Ceed projector
+to project onto the tissue.</p>
+<dl class="class">
+<dt id="ceed.tools.optics.OpticsApp">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">OpticsApp</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.OpticsApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.app.html#kivy.app.App" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.app.App</span></code></a></p>
+<dl class="method">
+<dt id="ceed.tools.optics.OpticsApp.build">
+<code class="sig-name descname">build</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.OpticsApp.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the application; it will be called only once.
+If this method returns a widget (tree), it will be used as the root
+widget and added to the window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>None or a root <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.widget.html#kivy.uix.widget.Widget" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Widget</span></code></a> instance
+if no self.root exists.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.PlotWidget">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">PlotWidget</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.PlotWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.boxlayout.BoxLayout</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.FormulaVariableBehavior">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">FormulaVariableBehavior</code><a class="headerlink" href="#ceed.tools.optics.FormulaVariableBehavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.PropertyDisplayBinding">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">PropertyDisplayBinding</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.PropertyDisplayBinding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.FormulaWidget">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">FormulaWidget</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.FormulaWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.boxlayout.html#kivy.uix.boxlayout.BoxLayout" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">kivy.uix.boxlayout.BoxLayout</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.LensFocalLengthFormula">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">LensFocalLengthFormula</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.LensFocalLengthFormula" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ceed.tools.optics.CeedFormula" title="ceed.tools.optics.CeedFormula"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.tools.optics.CeedFormula</span></code></a></p>
+<p>Only valid when not a virtual image.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.LensFixedObjectFormula">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">LensFixedObjectFormula</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.LensFixedObjectFormula" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ceed.tools.optics.CeedFormula" title="ceed.tools.optics.CeedFormula"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.tools.optics.CeedFormula</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.CeedFormula">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">CeedFormula</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.CeedFormula" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+<dl class="attribute">
+<dt id="ceed.tools.optics.CeedFormula.dependency_graph">
+<code class="sig-name descname">dependency_graph</code><em class="property"> = {}</em><a class="headerlink" href="#ceed.tools.optics.CeedFormula.dependency_graph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Only y variables are listed here.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.tools.optics.CeedFormula.infer_variable_value">
+<code class="sig-name descname">infer_variable_value</code><span class="sig-paren">(</span><em class="sig-param">variable</em>, <em class="sig-param">variables</em>, <em class="sig-param">in_subtree</em>, <em class="sig-param">input_variables</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.CeedFormula.infer_variable_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Variables accumulates the values of veriables.
+in_subtree stores whether a variable contains any of the
+input_vars in it’s dependency tree.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.tools.optics.CeedFormula.variables_in_subtree">
+<code class="sig-name descname">variables_in_subtree</code><span class="sig-paren">(</span><em class="sig-param">variable</em>, <em class="sig-param">in_subtree</em>, <em class="sig-param">input_variables</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.CeedFormula.variables_in_subtree" title="Permalink to this definition">¶</a></dt>
+<dd><p>We also check if the variable itself is a input variable.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.tools.optics.CeedFormula.y_dependency_ordered">
+<code class="sig-name descname">y_dependency_ordered</code><em class="property"> = []</em><a class="headerlink" href="#ceed.tools.optics.CeedFormula.y_dependency_ordered" title="Permalink to this definition">¶</a></dt>
+<dd><p>y variables ordered from leaf to dependant variables, such that
+any variable is only dependant on other y variables that are listed
+previously in <cite>y_dependency_ordered</cite>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.FormulaPlot">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">FormulaPlot</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.FormulaPlot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.tools.optics.FormulaGraph">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.tools.optics.</code><code class="sig-name descname">FormulaGraph</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.FormulaGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy_garden.graph.Graph</span></code></p>
+<dl class="method">
+<dt id="ceed.tools.optics.FormulaGraph.on_touch_down">
+<code class="sig-name descname">on_touch_down</code><span class="sig-paren">(</span><em class="sig-param">touch</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.tools.optics.FormulaGraph.on_touch_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a touch down event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>touch</cite>: <a class="reference external" href="https://kivy.org/doc/stable/api-kivy.input.motionevent.html#kivy.input.motionevent.MotionEvent" title="(in Kivy v1.11.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">MotionEvent</span></code></a> class</dt><dd><p>Touch received. The touch is in parent coordinates. See
+<a class="reference external" href="https://kivy.org/doc/stable/api-kivy.uix.relativelayout.html#module-kivy.uix.relativelayout" title="(in Kivy v1.11.1)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">relativelayout</span></code></a> for a discussion on
+coordinate systems.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>bool
+If True, the dispatching of the touch event will stop.
+If False, the event will continue to be dispatched to the rest
+of the widget tree.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="projector_io.html" class="btn btn-neutral float-right" title="Projector test app" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="main.html" class="btn btn-neutral float-left" title="Ceed App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

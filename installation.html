@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started" href="getting_started.html" />
+    <link rel="prev" title="System Blueprint" href="blueprint.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-on-ubuntu">Installation on Ubuntu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-apt-dependencies">Install the apt dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-virtual-env-for-the-project">Make a virtual env for the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-manual-python-dependencies">Install manual python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Install Ceed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-on-windows">Installation on Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Make a virtual env for the project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Install manual python dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">Install Ceed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-it-with-pycharm">Using it with PyCharm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/apps.html">Ceed Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">CEED Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/api.html">The Ceed API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation">
+<span id="install-ceed"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>Ceed can be found at <a class="reference external" href="https://github.com/matham/ceed">https://github.com/matham/ceed</a>.</p>
+<div class="section" id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
+<p>Following are the overall kivy dependencies. For exact instructions on how to install
+them see below.</p>
+<ul class="simple">
+<li><p>Python 3.6+.</p></li>
+<li><p>Kivy 2.0.0+ and Kivy-garden widgets for the GUI.</p></li>
+<li><p>numpy/scipy for the scientific stack.</p></li>
+<li><p>nixio to read/write data files.</p></li>
+<li><p>pypixxlib to control the PROPixx projector.</p></li>
+<li><p>McsPyDataTools to read the MCS generated e-phys data files.</p></li>
+<li><p>pyflycap2 when using Point Gray cameras.</p></li>
+<li><p>thorcam when using Thor cameras.</p></li>
+<li><p>ffpyplayer for media control.</p></li>
+<li><p>base_kivy_app provides a basic Kivy app structure.</p></li>
+<li><p>cpl_media provides control over the various cameras.</p></li>
+</ul>
+</div>
+<div class="section" id="installation-on-ubuntu">
+<h2>Installation on Ubuntu<a class="headerlink" href="#installation-on-ubuntu" title="Permalink to this headline">¶</a></h2>
+<p>Following is a step by step example installation of Ceed on Ubunutu 18.04, specifically
+tested on the computer that is used to run Ceed for the experiments.</p>
+<div class="section" id="install-the-apt-dependencies">
+<h3>Install the apt dependencies<a class="headerlink" href="#install-the-apt-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3</span> <span class="pre">python3-dev</span> <span class="pre">python3-pip</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="make-a-virtual-env-for-the-project">
+<h3>Make a virtual env for the project<a class="headerlink" href="#make-a-virtual-env-for-the-project" title="Permalink to this headline">¶</a></h3>
+<p>We’ll make the virtual env in home:</p>
+<ul class="simple">
+<li><p>Install update pip/virtualenv <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">--user</span> <span class="pre">pip</span> <span class="pre">virtualenv</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>.</p></li>
+<li><p>Make the virtualenv <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">virtualenv</span> <span class="pre">ceed_venv</span></code>.</p></li>
+<li><p>Activate it <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">ceed_venv/bin/activate</span></code>. You’ll have to do this every time you start a new terminal.</p></li>
+</ul>
+</div>
+<div class="section" id="install-manual-python-dependencies">
+<h3>Install manual python dependencies<a class="headerlink" href="#install-manual-python-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Install current <strong>kivy</strong> master</p>
+<ul>
+<li><p>Install apt dependencies: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">libsdl2-dev</span> <span class="pre">libsdl2-image-dev</span> <span class="pre">libsdl2-mixer-dev</span> <span class="pre">libsdl2-ttf-dev</span> <span class="pre">zlib1g-dev</span></code>.</p></li>
+<li><p>Install kivy: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/kivy/kivy/archive/master.zip</span></code> - it’ll take a couple of minutes.</p></li>
+</ul>
+</li>
+<li><p>If using a <strong>PointGray camera</strong>, on linux we must manually install its libraries</p>
+<ul>
+<li><p>Get it from <a class="reference external" href="https://www.flir.com/products/flycapture-sdk">here</a>, extract it and install by running <code class="docutils literal notranslate"><span class="pre">install_flycapture.sh</span></code>.</p></li>
+<li><p>Figure out your python version, find the appropriate linux wheel of the last release
+<a class="reference external" href="https://github.com/matham/pyflycap2/releases">here</a> and install e.g. with
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">https://github.com/matham/pyflycap2/releases/download/v0.3.0/pyflycap2-0.3.0-cp36-cp36m-linux_x86_64.whl</span></code>.</p></li>
+<li><p>If successful, you should be able to run
+<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-c</span> <span class="pre">'from</span> <span class="pre">pyflycap2.interface</span> <span class="pre">import</span> <span class="pre">CameraContext;</span> <span class="pre">cc</span> <span class="pre">=</span> <span class="pre">CameraContext();</span> <span class="pre">cc.rescan_bus();</span> <span class="pre">print(cc.get_gige_cams())'</span></code>
+and it’ll print a list of the serial numbers of all the connected cameras.</p></li>
+</ul>
+</li>
+<li><p>Install <strong>VPixx</strong> control software as well as <code class="docutils literal notranslate"><span class="pre">pypixxlib</span></code></p>
+<ul>
+<li><p>Go to their <a class="reference external" href="https://vpixx.com/">site</a> and download the vpixx debian package for ubuntu named e.g. <code class="docutils literal notranslate"><span class="pre">vpixx-software-tools.deb</span></code>.</p></li>
+<li><p>Install it with <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">./vpixx-software-tools.deb</span></code> from the download directory.</p></li>
+<li><p>To install <code class="docutils literal notranslate"><span class="pre">pypixxlib</span></code> you’ll need to locate <code class="docutils literal notranslate"><span class="pre">pypixxlib-xxx.tar.gz</span></code>, likely under <code class="docutils literal notranslate"><span class="pre">/usr/share/VPixx</span> <span class="pre">Software</span> <span class="pre">Tools/Software</span> <span class="pre">Tools/pypixxlib</span></code>
+and install it with e.g. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;/usr/share/VPixx</span> <span class="pre">Software</span> <span class="pre">Tools/Software</span> <span class="pre">Tools/pypixxlib/pypixxlib-3.5.5601.tar.gz&quot;</span></code>.</p></li>
+<li><p>To test if it is installed successfully, run <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-c</span> <span class="pre">&quot;from</span> <span class="pre">pypixxlib</span> <span class="pre">import</span> <span class="pre">_libdpx</span> <span class="pre">as</span> <span class="pre">libdpx&quot;</span></code>.</p>
+<ul>
+<li><p>If you get an error about print, the library doesn’t support python3 yet and you’ll need to fix it as follows:</p></li>
+<li><p>Locate where the library was installed by running <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-c</span> <span class="pre">&quot;import</span> <span class="pre">pypixxlib;</span> <span class="pre">print(pypixxlib.__path__)&quot;</span></code>.
+This should print something like <code class="docutils literal notranslate"><span class="pre">['/home/cpl/ceed_venv/lib/python3.6/site-packages/pypixxlib']</span></code>.</p></li>
+<li><p>cd to that directory with e.g. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/home/cpl/ceed_venv/lib/python3.6/site-packages/pypixxlib</span></code>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">2to3</span> <span class="pre">-w</span> <span class="pre">.</span></code> to convert any python 2 code to python 3 as best as possible. Ignore all the printed output.</p></li>
+<li><p>Test again with <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-c</span> <span class="pre">&quot;from</span> <span class="pre">pypixxlib</span> <span class="pre">import</span> <span class="pre">_libdpx</span> <span class="pre">as</span> <span class="pre">libdpx&quot;</span></code> and it shouldn’t raise any issues anymore.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Install Ceed<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Manually clone and install <strong>ceed</strong> and associated projects.
+We’ll clone it into PycharmProjects: <code class="docutils literal notranslate"><span class="pre">cd</span>&#160; <span class="pre">~/PycharmProjects/</span></code>
+Fow now, while the code is still changing, we’ll also clone <code class="docutils literal notranslate"><span class="pre">base_kivy_app</span></code> and <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code>
+and install them in place, rather than installing them like a normal pip dependency.
+Consequently, we’ll be able to pull the changes easily.</p>
+<ul class="simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">base_kivy_app</span></code></p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/base_kivy_app.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">base_kivy_app</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code></p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/cpl_media.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">cpl_media</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">ceed</span></code> finally</p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/ceed.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">ceed</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Once installed, you can start Ceed by simply typing <code class="docutils literal notranslate"><span class="pre">ceed</span></code> in the terminal.
+Or, you can run it directly using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">ceed.run_app</span></code>. Or from the
+ceed directory, just run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">ceed/run_app.py</span></code>.</p>
+</div>
+</div>
+<div class="section" id="installation-on-windows">
+<h2>Installation on Windows<a class="headerlink" href="#installation-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>Following is a step by step example installation of Ceed on Windows 10, specifically
+tested on the computer that runs the camera and MCS.</p>
+<div class="section" id="id3">
+<h3>Make a virtual env for the project<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Starting with Python and git available on the terminal, we’ll first make the virtual env in the home
+directory. The terminal should be in the home directory</p>
+<ul class="simple">
+<li><p>Install update pip/virtualenv <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">pip</span> <span class="pre">virtualenv</span></code>.</p></li>
+<li><p>Make the virtualenv <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">virtualenv</span> <span class="pre">ceed_venv</span></code>.</p></li>
+<li><p>Activate it <code class="docutils literal notranslate"><span class="pre">ceed_venv\Scripts\activate</span></code>. You’ll have to do this every time you start a new terminal.</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Install manual python dependencies<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Install current <strong>kivy</strong> master with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">kivy[base]</span> <span class="pre">kivy_examples</span> <span class="pre">--pre</span> <span class="pre">--extra-index-url</span> <span class="pre">https://kivy.org/downloads/simple/</span></code>.</p></li>
+<li><p>If using a <strong>PointGray camera</strong> install with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">pyflycap2</span></code>.</p>
+<ul>
+<li><p>If successful, you should be able to run
+<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;from</span> <span class="pre">pyflycap2.interface</span> <span class="pre">import</span> <span class="pre">CameraContext;</span> <span class="pre">cc</span> <span class="pre">=</span> <span class="pre">CameraContext();</span> <span class="pre">cc.rescan_bus();</span> <span class="pre">print(cc.get_gige_cams())&quot;</span></code>
+and it’ll print a list of the serial numbers of all the connected cameras.</p></li>
+</ul>
+</li>
+<li><p>If using a <strong>Thor camera</strong> install with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">thorcam</span></code>.</p></li>
+<li><p>Install <strong>VPixx</strong> control software as well as <code class="docutils literal notranslate"><span class="pre">pypixxlib</span></code>. Although we’re not typically running ceed on this computer,
+it can be tested here.</p>
+<ul>
+<li><p>Go to their <a class="reference external" href="https://vpixx.com/">site</a> and download the vpixx Windows executable for Windows named e.g.
+<code class="docutils literal notranslate"><span class="pre">setup.exe</span></code> and install it.</p></li>
+<li><p>To install <code class="docutils literal notranslate"><span class="pre">pypixxlib</span></code> you’ll need to locate <code class="docutils literal notranslate"><span class="pre">pypixxlib-xxx.tar.gz</span></code>, likely under <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\VPixx</span> <span class="pre">Technologies\Software</span> <span class="pre">Tools\pypixxlib</span></code>
+and install it with e.g. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;C:\Program</span> <span class="pre">Files\VPixx</span> <span class="pre">Technologies\Software</span> <span class="pre">Tools\pypixxlib\pypixxlib-3.5.5428.tar.gz&quot;</span></code>.</p></li>
+<li><p>To test if it is installed successfully, run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;from</span> <span class="pre">pypixxlib</span> <span class="pre">import</span> <span class="pre">_libdpx</span> <span class="pre">as</span> <span class="pre">libdpx&quot;</span></code>.</p>
+<ul>
+<li><p>If you get an error about print, the library doesn’t support python3 yet and you’ll need to fix it as follows</p></li>
+<li><p>Locate where the library was installed by running <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;import</span> <span class="pre">pypixxlib;</span> <span class="pre">print(pypixxlib.__path__)&quot;</span></code>.
+This should print something like <code class="docutils literal notranslate"><span class="pre">['C:\\Users\\MEArig\\ceed_venv\\lib\\site-packages\\pypixxlib']</span></code>.</p></li>
+<li><p>cd to that directory with e.g. <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">C:\Users\MEArig\ceed_venv\Lib\site-packages\pypixxlib</span></code>.</p></li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">2to3</span></code> with <a href="#id6"><span class="problematic" id="id7">``</span></a>pip install 2to3 <a href="#id8"><span class="problematic" id="id9">``</span></a>.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">2to3</span> <span class="pre">-w</span> <span class="pre">.</span></code> to convert any python 2 code to python 3 as best as possible. Ignore all the printed output.</p></li>
+<li><p>Test again with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;from</span> <span class="pre">pypixxlib</span> <span class="pre">import</span> <span class="pre">_libdpx</span> <span class="pre">as</span> <span class="pre">libdpx&quot;</span></code> and it shouldn’t raise any issues anymore.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id10">
+<h3>Install Ceed<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>Manually clone and install <strong>ceed</strong> and associated projects.
+We’ll clone it into PycharmProjects: <code class="docutils literal notranslate"><span class="pre">cd</span>&#160; <span class="pre">C:\Users\MEArig\PycharmProjects</span></code>
+Fow now, while the code is still changing, we’ll also clone <code class="docutils literal notranslate"><span class="pre">base_kivy_app</span></code> and <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code>
+and install them in place, rather than installing them like a normal pip dependency.
+Consequently, we’ll be able to pull the changes easily.</p>
+<ul class="simple">
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">base_kivy_app</span></code></p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/base_kivy_app.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">base_kivy_app</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code></p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/cpl_media.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">cpl_media</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">ceed</span></code> finally</p>
+<ul>
+<li><p>Clone with <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/matham/ceed.git</span></code>.</p></li>
+<li><p>Install in place with <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">ceed</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Once installed, you can start Ceed by simply typing <code class="docutils literal notranslate"><span class="pre">ceed</span></code> in the terminal.
+Or, you can run it directly using <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">ceed.run_app</span></code>. Or from the
+ceed directory, just run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">ceed/run_app.py</span></code>.</p>
+<p>Similarly, to run the cameras using the <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code> app, just type <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code> in the terminal.</p>
+</div>
+</div>
+<div class="section" id="using-it-with-pycharm">
+<h2>Using it with PyCharm<a class="headerlink" href="#using-it-with-pycharm" title="Permalink to this headline">¶</a></h2>
+<p>To use the installed projects from PyCharm, in PyCharm create a “new
+project”, point to the ceed directory and create it from the existing
+folder.</p>
+<p>When selecting a python installation, make sure to point to the virtual env
+and use that for all the projects.
+Do similarly for <code class="docutils literal notranslate"><span class="pre">base_kivy_app</span></code> and <code class="docutils literal notranslate"><span class="pre">cpl_media</span></code> if you want to access it
+from PyCharm.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="blueprint.html" class="btn btn-neutral float-left" title="System Blueprint" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

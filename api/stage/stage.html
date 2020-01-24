@@ -1,0 +1,1032 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Stages &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Stage widgets" href="widgets.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="api.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apps/apps.html">Ceed Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">CEED Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The Ceed API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ceed.html">Ceed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/analysis.html">Ceed data analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/merge_data.html">Ceed-MCS data merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/function.html">Function Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/function_plugin.html">Function plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/widgets.html">Function Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape/shape.html">Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape/widgets.html">Shape Widgets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Stages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widgets.html">Stage widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/view.html">Projector View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/view_widgets.html">Viewer widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/controller.html">View Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/main.html">Ceed View App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage/storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage/controller.html">Storage Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../player.html">Video Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graphics/graphics.html">Graphcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The Ceed API</a> &raquo;</li>
+        
+          <li><a href="api.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>Stages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/stage/stage.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-ceed.stage"></span><div class="section" id="stages">
+<h1>Stages<a class="headerlink" href="#stages" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> combines <code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.shapes</span></code> on the screen with a
+<a class="reference internal" href="../function/function.html#module-ceed.function" title="ceed.function"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.function</span></code></a> which determines the intensity of the shape as time
+progresses. This module defines the classes used to compute the
+intensity values for the shapes during an experimental stage.</p>
+<p>See <a class="reference internal" href="#ceed.stage.StageFactoryBase" title="ceed.stage.StageFactoryBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageFactoryBase</span></code></a> and <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> for details.</p>
+<p>remove_shapes_upon_deletion must be bound</p>
+<dl class="exception">
+<dt id="ceed.stage.StageDoneException">
+<em class="property">exception </em><code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">StageDoneException</code><a class="headerlink" href="#ceed.stage.StageDoneException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised as a signal by a <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> when it is done.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.stage.StageFactoryBase">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">StageFactoryBase</code><span class="sig-paren">(</span><em class="sig-param">function_factory</em>, <em class="sig-param">shape_factory</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+<p>A global store of the defined <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a>
+customized function instances.</p>
+<p>See <a class="reference internal" href="#module-ceed.stage" title="ceed.stage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.stage</span></code></a> for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Events</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>on_changed</cite>:</dt><dd><p>Triggered whenever a stage is added or removed from the factory.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.add_stage">
+<code class="sig-name descname">add_stage</code><span class="sig-paren">(</span><em class="sig-param">stage</em>, <em class="sig-param">allow_last_experiment=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.add_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> to the stage factory (<a class="reference internal" href="#ceed.stage.StageFactoryBase.stages" title="ceed.stage.StageFactoryBase.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>)
+and makes it available in the GUI.</p>
+<p>See <a class="reference internal" href="#module-ceed.stage" title="ceed.stage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.stage</span></code></a> for details.</p>
+<p>Remember to check <code class="xref py py-meth docutils literal notranslate"><span class="pre">can_other_stage_be_added()</span></code> before adding
+if there’s potential for it to return False.</p>
+<p>If the <a class="reference internal" href="#ceed.stage.CeedStage.name" title="ceed.stage.CeedStage.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage.name</span></code></a> already exists in <a class="reference internal" href="#ceed.stage.StageFactoryBase.stages" title="ceed.stage.StageFactoryBase.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>,
+<a class="reference internal" href="#ceed.stage.CeedStage.name" title="ceed.stage.CeedStage.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage.name</span></code></a> will be set to a unique name based on its
+original name. Once added until removed, anytime the stage’s
+<a class="reference internal" href="#ceed.stage.CeedStage.name" title="ceed.stage.CeedStage.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage.name</span></code></a> changes, if it clashes with an existing
+stage’s name, it is automatically renamed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stage</strong> – The <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> to add.</p></li>
+<li><p><strong>allow_last_experiment</strong> – Whether to allow the stage to have the
+same name is <code class="xref py py-attr docutils literal notranslate"><span class="pre">ceed.stage.last_experiment_stage_name</span></code>. If
+False and a stage with that name is added, it is renamed.
+Otherwise, it’s original name is kept.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.clear_stages">
+<code class="sig-name descname">clear_stages</code><span class="sig-paren">(</span><em class="sig-param">force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.clear_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all the stages registered with <a class="reference internal" href="#ceed.stage.StageFactoryBase.add_stage" title="ceed.stage.StageFactoryBase.add_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_stage()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>force</cite>: bool</dt><dd><p>If True, it’ll remove all stages even if there are
+references to them created by <a class="reference internal" href="#ceed.stage.StageFactoryBase.get_stage_ref" title="ceed.stage.StageFactoryBase.get_stage_ref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_stage_ref()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.fill_shape_gl_color_values">
+<code class="sig-name descname">fill_shape_gl_color_values</code><span class="sig-paren">(</span><em class="sig-param">shape_views</em>, <em class="sig-param">shape_values</em>, <em class="sig-param">grayscale=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.fill_shape_gl_color_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the dict of the Colors instance that control the color of
+each shape as well as the list of the color values for a time point
+and sets the shape colors to those values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>shape_views</cite>: dict</dt><dd><p>The dict of shape names and shapes colors as returned by
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions" title="ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_shapes_gl_color_instructions()</span></code></a>. If it is None,
+the color will not be updated but the return result will be
+identical to when not None.</p>
+</dd>
+<dt><cite>shape_values</cite>: list</dt><dd><p>The list of color intensity values to use for each shape as
+yielded by <a class="reference internal" href="#ceed.stage.StageFactoryBase.tick_stage" title="ceed.stage.StageFactoryBase.tick_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">tick_stage()</span></code></a>.</p>
+</dd>
+<dt><cite>grayscale</cite>: str</dt><dd><p>The colors to operate on. Can be any subset of the string
+‘rgb’. Specifically, although we get intensity values for every
+color, this takes the average intensity of the colors listed in
+<code class="docutils literal notranslate"><span class="pre">grayscale</span></code> and assigns their mean to all those colors.
+It’s how we turn the color into a gray-scale value.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of the colors each shape was set to. Each item in the list
+is <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">r,</span> <span class="pre">g,</span> <span class="pre">b,</span> <span class="pre">a)</span></code>, where <code class="docutils literal notranslate"><span class="pre">name</span></code> is the shape’s name and
+<code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">a</span></code> is the color value it was set to.
+Each <code class="docutils literal notranslate"><span class="pre">name</span></code> occurs at most once in the list.</p>
+</dd>
+</dl>
+<p>E.g. to display the shape intensities for time 0, .1, .2, …, 1.0 for
+the stage named <code class="docutils literal notranslate"><span class="pre">'my_stage'</span></code> in real time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">time</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tick</span> <span class="o">=</span> <span class="n">stage_factory</span><span class="o">.</span><span class="n">tick_stage</span><span class="p">(</span><span class="s1">&#39;my_stage&#39;</span><span class="p">)</span>  <span class="c1"># get iterator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># get the color objects</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">colors</span> <span class="o">=</span> <span class="n">stage_factory</span><span class="o">.</span><span class="n">get_shapes_gl_color_instructions</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">widget_canvas</span><span class="p">,</span> <span class="s1">&#39;my_canvas_instructs&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">tick</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">shape_values</span> <span class="o">=</span> <span class="n">tick</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># current color values</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="c1"># update the colors and print it</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">values</span> <span class="o">=</span> <span class="n">stage_factory</span><span class="o">.</span><span class="n">fill_shape_gl_color_values</span><span class="p">(</span>
+<span class="go">&gt;&gt;&gt;&gt;            colors, shape_values)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># wait until next time</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">except</span> <span class="n">StageDoneException</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="c1"># if we&#39;re here the stage has completed</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">break</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># now remove the shapes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">stage_factory</span><span class="o">.</span><span class="n">remove_shapes_gl_color_instructions</span><span class="p">(</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">widget_canvas</span><span class="p">,</span> <span class="s1">&#39;my_canvas_instructs&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.find_shape_in_all_stages">
+<code class="sig-name descname">find_shape_in_all_stages</code><span class="sig-paren">(</span><em class="sig-param">_</em>, <em class="sig-param">shape</em>, <em class="sig-param">process_shape_callback</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.find_shape_in_all_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a> instance from all the
+<a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> instances that it is a associated with.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>_</cite>: anything</dt><dd><p>This parameter is ignored and can be anything.</p>
+</dd>
+<dt><cite>shape</cite>: <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a></dt><dd><p>The shape to remove from all stages.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageFactoryBase.function_factory">
+<code class="sig-name descname">function_factory</code><em class="property"> = None</em><a class="headerlink" href="#ceed.stage.StageFactoryBase.function_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../function/function.html#ceed.function.FunctionFactoryBase" title="ceed.function.FunctionFactoryBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">FunctionFactoryBase</span></code></a> instance that contains
+or is associated with all the functions used in the stages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions">
+<code class="sig-name descname">get_shapes_gl_color_instructions</code><span class="sig-paren">(</span><em class="sig-param">canvas</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds all the kivy OpenGL instructions required to display the
+intensity-varying shapes to the kivy canvas and returns the color
+classes that control the color of each shape.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>canvas</cite>: Kivy canvas instance</dt><dd><p>The canvas to which the gl instructions are added. It add e.g.
+the polygon and its color.</p>
+</dd>
+<dt><cite>name</cite>: str</dt><dd><p>The name to associate with these OpenGL instructions.
+The name is used later to remove the instructions as it allows
+to clear all the instructions with that name.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a dict whose keys is the
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">kivy_garden.painter.PaintShape.name</span></code> of
+the <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a> and whose value is the Kivy
+<code class="docutils literal notranslate"><span class="pre">Color</span></code> instruction instance that controls the color of the
+shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.get_stage_ref">
+<code class="sig-name descname">get_stage_ref</code><span class="sig-paren">(</span><em class="sig-param">name: str = None</em>, <em class="sig-param">stage: Optional[ceed.stage.CeedStage] = None</em><span class="sig-paren">)</span> &#x2192; ceed.stage.CeedStageRef<a class="headerlink" href="#ceed.stage.StageFactoryBase.get_stage_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <a class="reference internal" href="#ceed.stage.CeedStageRef" title="ceed.stage.CeedStageRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStageRef</span></code></a> instance that refers to the
+original stage. See <a class="reference internal" href="#module-ceed.stage" title="ceed.stage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.stage</span></code></a> for details.</p>
+<p>One of <code class="docutils literal notranslate"><span class="pre">name</span></code> or <code class="docutils literal notranslate"><span class="pre">stage</span></code> must be specified. The stage being
+referenced by <code class="docutils literal notranslate"><span class="pre">stage</span></code> should have been added to this instance,
+although it is not explicitly enforced currently.</p>
+<p>If used, <code class="xref py py-meth docutils literal notranslate"><span class="pre">return_stae_ref()</span></code> must be called when the reference
+is not used anymore.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the stage to lookup in <a class="reference internal" href="#ceed.stage.StageFactoryBase.stage_names" title="ceed.stage.StageFactoryBase.stage_names"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stage_names</span></code></a>.</p></li>
+<li><p><strong>stage</strong> – Or the actual stage to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A <a class="reference internal" href="#ceed.stage.CeedStageRef" title="ceed.stage.CeedStageRef"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStageRef</span></code></a> to the original stage.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.make_stage">
+<code class="sig-name descname">make_stage</code><span class="sig-paren">(</span><em class="sig-param">state: dict</em>, <em class="sig-param">instance: Union[CeedStage</em>, <em class="sig-param">CeedStageRef] = None</em>, <em class="sig-param">clone=False</em>, <em class="sig-param">func_name_map: dict = {}</em>, <em class="sig-param">old_name_to_shape_map: dict = None</em><span class="sig-paren">)</span> &#x2192; Union[ceed.stage.CeedStage, ceed.stage.CeedStageRef]<a class="headerlink" href="#ceed.stage.StageFactoryBase.make_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiates the stage from the state and returns it.</p>
+<p>This method must be used to instantiate a stage from state.
+See <a class="reference internal" href="#module-ceed.stage" title="ceed.stage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.stage</span></code></a> for details and an example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> – The state dict representing the stage as returned by
+<code class="xref py py-meth docutils literal notranslate"><span class="pre">FuncBase.get_state()</span></code>.</p></li>
+<li><p><strong>instance</strong> – If None, a stage instance will be created and state
+will applied to it. Otherwise, it is applied to the given instance,
+which must be of the correct class.</p></li>
+<li><p><strong>clone</strong> – See <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.apply_state()</span></code></a>.</p></li>
+<li><p><strong>func_name_map</strong> – See <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.apply_state()</span></code></a>.</p></li>
+<li><p><strong>old_name_to_shape_map</strong> – See <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.apply_state()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The stage instance created or used.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.recover_stages">
+<code class="sig-name descname">recover_stages</code><span class="sig-paren">(</span><em class="sig-param">stage_states: List[dict], func_name_map: dict, old_name_to_shape_map: dict</em><span class="sig-paren">)</span> &#x2192; Tuple[List[ceed.stage.CeedStage], Dict[str, str]]<a class="headerlink" href="#ceed.stage.StageFactoryBase.recover_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a list of stages states such as returned by
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.save_stages" title="ceed.stage.StageFactoryBase.save_stages"><code class="xref py py-meth docutils literal notranslate"><span class="pre">save_stages()</span></code></a> and instantiates the stages represented by
+the states and adds (<a class="reference internal" href="#ceed.stage.StageFactoryBase.add_stage" title="ceed.stage.StageFactoryBase.add_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_stage()</span></code></a>) the stages to the factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stage_states</strong> – List of stages state.</p></li>
+<li><p><strong>func_name_map</strong> – See <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.apply_state()</span></code></a>.</p></li>
+<li><p><strong>old_name_to_shape_map</strong> – See <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.apply_state()</span></code></a>.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple <code class="docutils literal notranslate"><span class="pre">stages,</span> <span class="pre">name_map</span></code>, <code class="docutils literal notranslate"><span class="pre">stages</span></code> is the list of
+stages, <code class="docutils literal notranslate"><span class="pre">name_map</span></code> is a map from the original stage’s name
+to the new name given to the stage (in case a stage with that
+name already existed).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.remove_shapes_gl_color_instructions">
+<code class="sig-name descname">remove_shapes_gl_color_instructions</code><span class="sig-paren">(</span><em class="sig-param">canvas</em>, <em class="sig-param">name</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.remove_shapes_gl_color_instructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all the shape and color instructions that was added with
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions" title="ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_shapes_gl_color_instructions()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>canvas</cite>: Kivy canvas instance</dt><dd><p>The canvas to which the gl instructions were added.</p>
+</dd>
+<dt><cite>name</cite>: str</dt><dd><p>The name used when adding the instructions with
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions" title="ceed.stage.StageFactoryBase.get_shapes_gl_color_instructions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_shapes_gl_color_instructions()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.remove_stage">
+<code class="sig-name descname">remove_stage</code><span class="sig-paren">(</span><em class="sig-param">stage</em>, <em class="sig-param">force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.remove_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a stage previously added with <a class="reference internal" href="#ceed.stage.StageFactoryBase.add_stage" title="ceed.stage.StageFactoryBase.add_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_stage()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>stage</cite>: <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a></dt><dd><p>The stage to remove.</p>
+</dd>
+<dt><cite>force</cite>: bool</dt><dd><p>If True, it’ll remove the stage even if there are references
+to it created by <a class="reference internal" href="#ceed.stage.StageFactoryBase.get_stage_ref" title="ceed.stage.StageFactoryBase.get_stage_ref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_stage_ref()</span></code></a>.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether the stage was removed successfully. E.g. if
+force is False and it has a ref, it won’t be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.return_stage_ref">
+<code class="sig-name descname">return_stage_ref</code><span class="sig-paren">(</span><em class="sig-param">stage_ref: ceed.stage.CeedStageRef</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.return_stage_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Releases the stage ref created by <a class="reference internal" href="#ceed.stage.StageFactoryBase.get_stage_ref" title="ceed.stage.StageFactoryBase.get_stage_ref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_stage_ref()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stage_ref</strong> – Instance returned by <a class="reference internal" href="#ceed.stage.StageFactoryBase.get_stage_ref" title="ceed.stage.StageFactoryBase.get_stage_ref"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_stage_ref()</span></code></a>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.save_stages">
+<code class="sig-name descname">save_stages</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[dict]<a class="headerlink" href="#ceed.stage.StageFactoryBase.save_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dict representation of all the stages added with
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.add_stage" title="ceed.stage.StageFactoryBase.add_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_stage()</span></code></a>.</p>
+<p>It is a list of dicts where each item is the
+<a class="reference internal" href="#ceed.stage.CeedStage.get_state" title="ceed.stage.CeedStage.get_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.get_state()</span></code></a> of the corresponding stage in
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.stages" title="ceed.stage.StageFactoryBase.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageFactoryBase.shape_factory">
+<code class="sig-name descname">shape_factory</code><em class="property"> = None</em><a class="headerlink" href="#ceed.stage.StageFactoryBase.shape_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedPaintCanvasBehavior" title="ceed.shape.CeedPaintCanvasBehavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedPaintCanvasBehavior</span></code></a> instance that contains
+or is associated with all the shapes used in the stages.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageFactoryBase.stage_names">
+<code class="sig-name descname">stage_names</code><a class="headerlink" href="#ceed.stage.StageFactoryBase.stage_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dict of all the stages whose keys are the stage <a class="reference internal" href="#ceed.stage.CeedStage.name" title="ceed.stage.CeedStage.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage.name</span></code></a>
+and whose values are the corresponding <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> instances.</p>
+<p>This contains the same stages as in <a class="reference internal" href="#ceed.stage.StageFactoryBase.stages" title="ceed.stage.StageFactoryBase.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageFactoryBase.stages">
+<code class="sig-name descname">stages</code><em class="property"> = []</em><a class="headerlink" href="#ceed.stage.StageFactoryBase.stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of the currently available <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> instances.
+These stages are listed in the GUI and can be used by name to start a stage
+to run.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageFactoryBase.tick_stage">
+<code class="sig-name descname">tick_stage</code><span class="sig-paren">(</span><em class="sig-param">stage_name=''</em>, <em class="sig-param">stage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageFactoryBase.tick_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>An iterator which starts a <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> and ticks the time for
+every call.</p>
+<p>A <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> represents a collection of shapes with functions
+applied to them. Each of these shapes has a defined intensity for
+every time point. This iterator walks through time denoting the
+intensity for each shape for every time point.</p>
+<p>E.g. to get the shape values for time 0, .1, .2, …, 1.0 for the
+stage named <code class="docutils literal notranslate"><span class="pre">'my_stage'</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tick</span> <span class="o">=</span> <span class="n">stage_factory</span><span class="o">.</span><span class="n">tick_stage</span><span class="p">(</span><span class="s1">&#39;my_stage&#39;</span><span class="p">)</span>  <span class="c1"># get iterator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">tick</span><span class="o">.</span><span class="n">next</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">shape_values</span> <span class="o">=</span> <span class="n">tick</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span><span class="p">(</span><span class="n">shape_values</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">except</span> <span class="n">StageDoneException</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="c1"># if we&#39;re here the stage has completed</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">break</span>
+</pre></div>
+</div>
+<p>To use it, create the iterator, then for every time point call <cite>next()</cite>
+on the iterator and then send the monotonically increasing time to
+the function using <cite>send()</cite> and in return the iterator will yield
+the associated intensity values for each shape for that time point.</p>
+<dl class="field-list">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>stage_name</cite>: str</dt><dd><p>The <a class="reference internal" href="#ceed.stage.CeedStage.name" title="ceed.stage.CeedStage.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage.name</span></code></a> of the stage to start.</p>
+</dd>
+<dt><cite>stage</cite>: str</dt><dd><p>The <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-attr docutils literal notranslate"><span class="pre">CeedStage</span></code></a> to start.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>A list of the intensity values for each shape.</p>
+<p>Each item in the list is a 2-tuple of <code class="docutils literal notranslate"><span class="pre">(name,</span> <span class="pre">values)</span></code>. <code class="docutils literal notranslate"><span class="pre">name</span></code>
+is the <code class="xref py py-attr docutils literal notranslate"><span class="pre">kivy_garden.painter.PaintShape.name</span></code> of the shape
+and is listed only once in the list.
+<code class="docutils literal notranslate"><span class="pre">values</span></code> is a list of color values and each item in that list is
+a 4-tuple of <code class="docutils literal notranslate"><span class="pre">(r,</span> <span class="pre">g,</span> <span class="pre">b,</span> <span class="pre">a)</span></code>. Any of these values can be None, in
+which case that color remains the same. This way a shape can be
+updated from multiple sub-stages, where only e.g. the <code class="docutils literal notranslate"><span class="pre">r</span></code> value
+is changed.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>StageDoneException</cite>:</dt><dd><p>When done with the stage (time is out of bounds).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.stage.CeedStage">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">CeedStage</code><span class="sig-paren">(</span><em class="sig-param">stage_factory</em>, <em class="sig-param">function_factory</em>, <em class="sig-param">shape_factory</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+<p>The stage that controls a time period of an experiment.</p>
+<p>A stage is composed of multiple shape objects, <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a>, a series
+of <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a> functions, <a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a>, that
+describe the intensity values these shapes take across time, and
+sub-stages, <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>, that are similarly evaluated during this stage.</p>
+<p>During a <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a>, if there are child <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a> that have
+their own shapes we also tick through these stages while the root stage is
+evaluated. That means the shapes associated with the root stage intensity
+values is updated as are the the intensity values of the shapes from the
+sub-stage.</p>
+<p>E.g. if we have a root stage (blue) which contains 4 children
+<a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a> A, B, C, D (purple to orange) as in the image.
+If <a class="reference internal" href="#ceed.stage.CeedStage.order" title="ceed.stage.CeedStage.order"><code class="xref py py-attr docutils literal notranslate"><span class="pre">order</span></code></a> is <code class="docutils literal notranslate"><span class="pre">'serial'</span></code> as in the lower part, then each sub-stage
+is evaluated sequentially after the previous sub-stage has finished.</p>
+<p>If it’s <code class="docutils literal notranslate"><span class="pre">'parallel'</span></code>, the upper part, then each sub-stage is evaluated
+simultaneously with the root stage.</p>
+<p>If <a class="reference internal" href="#ceed.stage.CeedStage.complete_on" title="ceed.stage.CeedStage.complete_on"><code class="xref py py-attr docutils literal notranslate"><span class="pre">complete_on</span></code></a> is <code class="docutils literal notranslate"><span class="pre">'any'</span></code> then the root stage will complete after
+stage <code class="docutils literal notranslate"><span class="pre">A</span></code> completes because it completes first in each case. If it is
+<code class="docutils literal notranslate"><span class="pre">'all'</span></code> then it will complete after the root stage is completed because
+that is the longest.</p>
+<p>In all cases, shapes that are not associated with a stage that is
+currently being evaluated will be set to transparent. E.g. in the serial
+case, shapes that are associated with stage C will be transparent in all
+other stages, except if they also appear in those stages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Events</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>on_changed</cite>:</dt><dd><p>Triggered whenever a stage’s configuration option changes or
+if one of the functions or shapes of the stage is added/removed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ceed.stage.CeedStage.add_func">
+<code class="sig-name descname">add_func</code><span class="sig-paren">(</span><em class="sig-param">func</em>, <em class="sig-param">after=None</em>, <em class="sig-param">index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.add_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds the function instance <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a> to
+<a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>func</cite>: <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a></dt><dd><p>The function to add.</p>
+</dd>
+<dt><cite>after</cite>: <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a></dt><dd><p>The function in <a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> after which to add this
+function, if not None, the default.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.add_shape">
+<code class="sig-name descname">add_shape</code><span class="sig-paren">(</span><em class="sig-param">shape: Union[ceed.shape.CeedShapeGroup, ceed.shape.CeedShape]</em><span class="sig-paren">)</span> &#x2192; ceed.stage.StageShape<a class="headerlink" href="#ceed.stage.CeedStage.add_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a <a class="reference internal" href="#ceed.stage.StageShape" title="ceed.stage.StageShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageShape</span></code></a> instance wrapping the
+<a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a> <code class="docutils literal notranslate"><span class="pre">shape</span></code> to the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a>. If
+the <code class="docutils literal notranslate"><span class="pre">shape</span></code> was already added it doesn’t add it again.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>shape</cite>: <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a></dt><dd><p>The shape instance to add.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The <a class="reference internal" href="#ceed.stage.StageShape" title="ceed.stage.StageShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageShape</span></code></a> created if the shape wasn’t already added,
+otherwise None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.add_stage">
+<code class="sig-name descname">add_stage</code><span class="sig-paren">(</span><em class="sig-param">stage</em>, <em class="sig-param">after=None</em>, <em class="sig-param">index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.add_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds a sub-stage instance <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> to <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.apply_state">
+<code class="sig-name descname">apply_state</code><span class="sig-paren">(</span><em class="sig-param">state={}</em>, <em class="sig-param">clone=False</em>, <em class="sig-param">func_name_map={}</em>, <em class="sig-param">old_name_to_shape_map=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.apply_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes the state of the stage saved with <a class="reference internal" href="#ceed.stage.CeedStage.get_state" title="ceed.stage.CeedStage.get_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_state()</span></code></a> and
+applies it to this stage. it also creates any children functions and
+stages and creates the references to the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a>.</p>
+<p>It is called internally and should not be used directly. Use
+<a class="reference internal" href="#ceed.stage.StageFactoryBase.make_stage" title="ceed.stage.StageFactoryBase.make_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">StageFactoryBase.make_stage()</span></code></a> instead.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state</strong> – The state dict representing the stage as returned by
+<a class="reference internal" href="#ceed.stage.CeedStage.get_state" title="ceed.stage.CeedStage.get_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_state()</span></code></a>.</p></li>
+<li><p><strong>clone</strong> – If False, only user customizable properties of the
+stage will be set, otherwise, all properties from state are
+applied to the stage. Clone is meant to be an complete
+re-instantiation of stage function.</p></li>
+<li><p><strong>func_name_map</strong> – </p></li>
+<li><p><strong>old_name_to_shape_map</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.can_other_stage_be_added">
+<code class="sig-name descname">can_other_stage_be_added</code><span class="sig-paren">(</span><em class="sig-param">other_stage</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.can_other_stage_be_added" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the other stagetion may be added to us.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.color_a">
+<code class="sig-name descname">color_a</code><a class="headerlink" href="#ceed.stage.CeedStage.color_a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a> alpha channel should be set. Currently
+this is ignored.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.color_b">
+<code class="sig-name descname">color_b</code><a class="headerlink" href="#ceed.stage.CeedStage.color_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a> blue channel should be set to the
+<a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> value or if it should remain at zero intensity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.color_g">
+<code class="sig-name descname">color_g</code><a class="headerlink" href="#ceed.stage.CeedStage.color_g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a> green channel should be set to the
+<a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> value or if it should remain at zero intensity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.color_r">
+<code class="sig-name descname">color_r</code><a class="headerlink" href="#ceed.stage.CeedStage.color_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the <a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a> red channel should be set to the
+<a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> value or if it should remain at zero intensity.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.complete_on">
+<code class="sig-name descname">complete_on</code><a class="headerlink" href="#ceed.stage.CeedStage.complete_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>When to consider the stage’s children stages to be complete we contain
+sub-stages - <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>. Can be one of <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, <code class="docutils literal notranslate"><span class="pre">'any'</span></code>.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">'any'</span></code>, this stage is done when <strong>any</strong> of the children stages is
+done, and when all of this stage’s functions are done. If <code class="docutils literal notranslate"><span class="pre">'all'</span></code>, this
+stage is done when <strong>any</strong> children stages are done, and when all of this
+stage’s functions are done.</p>
+<p>See <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> description for details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.functions">
+<code class="sig-name descname">functions</code><em class="property"> = []</em><a class="headerlink" href="#ceed.stage.CeedStage.functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a> instances through which the
+stage iterates through sequentially and updates the intensity of the
+<a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a> to the function value at each time point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.get_stage_shape_names">
+<code class="sig-name descname">get_stage_shape_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.get_stage_shape_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all the names of the shapes controlled by the stage or
+sub-stages.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.get_stages">
+<code class="sig-name descname">get_stages</code><span class="sig-paren">(</span><em class="sig-param">step_into_ref=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.get_stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterator that iterates depth-first through all the stages
+and children <code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span> <span class="pre">and</span> <span class="pre">yields</span> <span class="pre">these</span> <span class="pre">stages.</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.get_state">
+<code class="sig-name descname">get_state</code><span class="sig-paren">(</span><em class="sig-param">expand_ref=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a dict representation of the stage so that it can be
+reconstructed later with <a class="reference internal" href="#ceed.stage.CeedStage.apply_state" title="ceed.stage.CeedStage.apply_state"><code class="xref py py-meth docutils literal notranslate"><span class="pre">apply_state()</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>state</cite>: dict</dt><dd><p>A dict with the state, to which configuration items and their
+values are added. If None, the default, a dict is created and
+returned.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A dict with all the configuration data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.has_ref">
+<code class="sig-name descname">has_ref</code><a class="headerlink" href="#ceed.stage.CeedStage.has_ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether there’s a CeedFuncRef pointing to this function.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#ceed.stage.CeedStage.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of this stage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.order">
+<code class="sig-name descname">order</code><a class="headerlink" href="#ceed.stage.CeedStage.order" title="Permalink to this definition">¶</a></dt>
+<dd><p>The order in which the sub-stages, <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>, are evaluated.
+Can be one of <code class="docutils literal notranslate"><span class="pre">'serial'</span></code>, <code class="docutils literal notranslate"><span class="pre">'parallel'</span></code>.</p>
+<p>See <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> description for details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.parent_stage">
+<code class="sig-name descname">parent_stage</code><a class="headerlink" href="#ceed.stage.CeedStage.parent_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The parent stage when this stage is a sub-stage of another.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.remove_func">
+<code class="sig-name descname">remove_func</code><span class="sig-paren">(</span><em class="sig-param">func</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.remove_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes the function instance <a class="reference internal" href="../function/function.html#ceed.function.FuncBase" title="ceed.function.FuncBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.function.FuncBase</span></code></a> from
+<a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.remove_shape">
+<code class="sig-name descname">remove_shape</code><span class="sig-paren">(</span><em class="sig-param">stage_shape</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.remove_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a <a class="reference internal" href="#ceed.stage.StageShape" title="ceed.stage.StageShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageShape</span></code></a> that was previously added to
+<a class="reference internal" href="#ceed.stage.CeedStage.shapes" title="ceed.stage.CeedStage.shapes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">shapes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.remove_stage">
+<code class="sig-name descname">remove_stage</code><span class="sig-paren">(</span><em class="sig-param">stage</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.remove_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a sub-stage instance <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> from <a class="reference internal" href="#ceed.stage.CeedStage.stages" title="ceed.stage.CeedStage.stages"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stages</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.shapes">
+<code class="sig-name descname">shapes</code><em class="property"> = []</em><a class="headerlink" href="#ceed.stage.CeedStage.shapes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The list of <a class="reference internal" href="#ceed.stage.StageShape" title="ceed.stage.StageShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageShape</span></code></a> instances that are associated
+with this stage. All the shapes are set to the same intensity value at
+every time point according to the <a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> value at that
+time point.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.CeedStage.stages">
+<code class="sig-name descname">stages</code><em class="property"> = []</em><a class="headerlink" href="#ceed.stage.CeedStage.stages" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> instances that are sub-stages of this
+stage.</p>
+<p>See <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> description for details.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.tick_funcs">
+<code class="sig-name descname">tick_funcs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.tick_funcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterates through the <a class="reference internal" href="#ceed.stage.CeedStage.functions" title="ceed.stage.CeedStage.functions"><code class="xref py py-attr docutils literal notranslate"><span class="pre">functions</span></code></a> of this stage sequentially
+and returns the function’s value associated with that time.</p>
+<p>E.g. to get the function value for time 0, .1, .2, …, 1.0 for this
+stage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tick_funcs</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">next</span><span class="p">(</span><span class="n">funcs</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">val</span> <span class="o">=</span> <span class="n">funcs</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">except</span> <span class="n">FuncDoneException</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">break</span>  <span class="c1"># function is done</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.CeedStage.tick_stage">
+<code class="sig-name descname">tick_stage</code><span class="sig-paren">(</span><em class="sig-param">shapes</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStage.tick_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#ceed.stage.StageFactoryBase.tick_stage" title="ceed.stage.StageFactoryBase.tick_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">StageFactoryBase.tick_stage()</span></code></a> but for this stage.</p>
+<p>It is an iterator that iterates through time and returns the
+intensity values for the shapes associated with this stage and its
+sub-stages.</p>
+<p>Specifically, at every iteration a time value is sent to the iterator
+which then updates the <code class="docutils literal notranslate"><span class="pre">shapes</span></code> dict with the intensity values of the
+shape for this time-point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>shapes</cite>: dict</dt><dd><p>A dict whose keys is the name of all the shapes of this stage
+and its sub-stages. The corresponding values are empty lists.
+At every iteration the list will be filled in with color values
+and should be cleared before the next iteration.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl class="simple">
+<dt><cite>StageDoneException</cite>:</dt><dd><p>When done with the stage (time is out of bounds).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>E.g. to get the shape values for time 0, .1, .2, …, 1.0 for this
+stage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># get dict of shapes using the painter controller</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shapes</span> <span class="o">=</span> <span class="p">{</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="p">[]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">shape_factory</span><span class="o">.</span><span class="n">shapes</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tick_stage</span> <span class="o">=</span> <span class="n">stage</span><span class="o">.</span><span class="n">tick_stage</span><span class="p">(</span><span class="n">shapes</span><span class="p">)</span>  <span class="c1"># create iterator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">next</span><span class="p">(</span><span class="n">tick_stage</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="o">.</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">4</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="o">.</span><span class="mi">6</span><span class="p">,</span> <span class="o">.</span><span class="mi">7</span><span class="p">,</span> <span class="o">.</span><span class="mi">8</span><span class="p">,</span> <span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="n">tick_stage</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>  <span class="c1"># update</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">except</span> <span class="n">StageDoneException</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">break</span>  <span class="c1"># if we&#39;re here the stage has completed</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">colors</span> <span class="ow">in</span> <span class="n">shapes</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">colors</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span>        <span class="k">del</span> <span class="n">colors</span><span class="p">[:]</span>  <span class="c1"># clear for next iteration</span>
+</pre></div>
+</div>
+<p>In the example above. <code class="docutils literal notranslate"><span class="pre">colors</span></code> for each shape is a list of
+4-tuple r, g, b, a values, each of which can be None similarly to what
+is described at <a class="reference internal" href="#ceed.stage.StageFactoryBase.tick_stage" title="ceed.stage.StageFactoryBase.tick_stage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">StageFactoryBase.tick_stage()</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.stage.StageShape">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">StageShape</code><span class="sig-paren">(</span><em class="sig-param">stage=None</em>, <em class="sig-param">shape=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.StageShape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+<p>A wrapper for <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a> instances used in
+<a class="reference internal" href="#ceed.stage.CeedStage.add_shape" title="ceed.stage.CeedStage.add_shape"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CeedStage.add_shape()</span></code></a> to wrap a shape or shape group to be used by
+the stage.</p>
+<dl class="method">
+<dt id="ceed.stage.StageShape.apply_config_properties">
+<code class="sig-name descname">apply_config_properties</code><span class="sig-paren">(</span><em class="sig-param">settings: Dict</em><span class="sig-paren">)</span> &#x2192; set<a class="headerlink" href="#ceed.stage.StageShape.apply_config_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>(internal) used by the config system to set the config data
+of the shape.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.stage.StageShape.get_config_properties">
+<code class="sig-name descname">get_config_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<a class="headerlink" href="#ceed.stage.StageShape.get_config_properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>(internal) used by the config system to get the config data of the
+shape.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageShape.keep_dark">
+<code class="sig-name descname">keep_dark</code><a class="headerlink" href="#ceed.stage.StageShape.keep_dark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether this shape will be black during the whole stage. Instead of it
+taking the color of the stage, it’ll be kept black.</p>
+<p>This is useful when the inside of some shape must be black, e.g. a donut.
+By setting <a class="reference internal" href="#ceed.stage.StageShape.keep_dark" title="ceed.stage.StageShape.keep_dark"><code class="xref py py-attr docutils literal notranslate"><span class="pre">keep_dark</span></code></a> of the inner shape to True, it’ll be black.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageShape.name">
+<code class="sig-name descname">name</code><a class="headerlink" href="#ceed.stage.StageShape.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShapeGroup.name" title="ceed.shape.CeedShapeGroup.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ceed.shape.CeedShapeGroup.name</span></code></a> or
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">kivy_garden.painter.PaintShape.name</span></code> of the instance wrapped.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageShape.shape">
+<code class="sig-name descname">shape</code><em class="property"> = None</em><a class="headerlink" href="#ceed.stage.StageShape.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShape" title="ceed.shape.CeedShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShape</span></code></a> or <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedShapeGroup" title="ceed.shape.CeedShapeGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.shape.CeedShapeGroup</span></code></a>
+instance being wrapped.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.stage.StageShape.stage">
+<code class="sig-name descname">stage</code><em class="property"> = None</em><a class="headerlink" href="#ceed.stage.StageShape.stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> this is associated with.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.stage.CeedStageRef">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">CeedStageRef</code><span class="sig-paren">(</span><em class="sig-param">stage_factory</em>, <em class="sig-param">function_factory</em>, <em class="sig-param">shape_factory</em>, <em class="sig-param">stage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.CeedStageRef" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The function it refers to must be in the factory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ceed.stage.remove_shapes_upon_deletion">
+<code class="sig-prename descclassname">ceed.stage.</code><code class="sig-name descname">remove_shapes_upon_deletion</code><span class="sig-paren">(</span><em class="sig-param">stage_factory: ceed.stage.StageFactoryBase</em>, <em class="sig-param">shape_factory: ceed.shape.CeedPaintCanvasBehavior</em>, <em class="sig-param">process_shape_callback</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.stage.remove_shapes_upon_deletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Once called, whenever a shape or group of shapes is deleted in the
+<code class="docutils literal notranslate"><span class="pre">shape_factory</span></code>, it’ll also remove the shape or group from all stages
+that reference it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stage_factory</strong> – The <a class="reference internal" href="#ceed.stage.StageFactoryBase" title="ceed.stage.StageFactoryBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageFactoryBase</span></code></a> that lists all the
+stages.</p></li>
+<li><p><strong>shape_factory</strong> – The <a class="reference internal" href="../shape/shape.html#ceed.shape.CeedPaintCanvasBehavior" title="ceed.shape.CeedPaintCanvasBehavior"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedPaintCanvasBehavior</span></code></a> that
+lists all the shapes.</p></li>
+<li><p><strong>process_shape_callback</strong> – For each stage in <code class="docutils literal notranslate"><span class="pre">stage_factory</span></code> that
+contains the shape, <code class="docutils literal notranslate"><span class="pre">process_shape_callback</span></code> will be called with 2
+parameters: the <a class="reference internal" href="#ceed.stage.CeedStage" title="ceed.stage.CeedStage"><code class="xref py py-class docutils literal notranslate"><span class="pre">CeedStage</span></code></a> and <a class="reference internal" href="#ceed.stage.StageShape" title="ceed.stage.StageShape"><code class="xref py py-class docutils literal notranslate"><span class="pre">StageShape</span></code></a> instances.
+The callback may e.g. then hide the shape in the GUI or whatever else
+it needs.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="widgets.html" class="btn btn-neutral float-right" title="Stage widgets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="api.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

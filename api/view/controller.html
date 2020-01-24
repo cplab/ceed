@@ -1,0 +1,712 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>View Controller &mdash; Ceed  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Ceed View App" href="main.html" />
+    <link rel="prev" title="Viewer widgets" href="view_widgets.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Ceed
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../blueprint.html">System Blueprint</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../apps/apps.html">Ceed Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">CEED Config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../optics/optics.html">Microscope optics</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">The Ceed API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../ceed.html">Ceed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/analysis.html">Ceed data analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/merge_data.html">Ceed-MCS data merging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/function.html">Function Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/function_plugin.html">Function plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../function/widgets.html">Function Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape/shape.html">Shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape/widgets.html">Shape Widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stage/stage.html">Stages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stage/widgets.html">Stage widgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view.html">Projector View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view_widgets.html">Viewer widgets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">View Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="main.html">Ceed View App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage/storage.html">Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../storage/controller.html">Storage Controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../player.html">Video Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils.html">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graphics/graphics.html">Graphcs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../example_code/example_code.html">Example Analysis Code</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Ceed</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">The Ceed API</a> &raquo;</li>
+        
+          <li><a href="api.html">&lt;no title&gt;</a> &raquo;</li>
+        
+      <li>View Controller</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/view/controller.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <span class="target" id="module-ceed.view.controller"></span><div class="section" id="view-controller">
+<h1>View Controller<a class="headerlink" href="#view-controller" title="Permalink to this headline">¶</a></h1>
+<p>Displays the preview or live pixel output of the experiment.</p>
+<dl class="class">
+<dt id="ceed.view.controller.ViewControllerBase">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.view.controller.</code><code class="sig-name descname">ViewControllerBase</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">kivy._event.EventDispatcher</span></code></p>
+<p>A base class for visualizing the output of a <a class="reference internal" href="../stage/stage.html#module-ceed.stage" title="ceed.stage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ceed.stage</span></code></a> on the
+projector or to preview it in the main GUI.</p>
+<p>The usage of ceed is to run a GUI in which stages, shapes, and functions
+are designed. Subsequently, the stage is played on the projector or
+previewed in the main GUI and displays shapes varying with intensity as
+time progresses, as designed.</p>
+<p>When the stage is played as a preview in the main GUI, all the code is
+executed within the main process. In this case the controller is a
+<a class="reference internal" href="#ceed.view.controller.ControllerSideViewControllerBase" title="ceed.view.controller.ControllerSideViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ControllerSideViewControllerBase</span></code></a> instance.</p>
+<p>When the stage is played for real, it is played in a second process in
+a second window which can be displayed on the projector window. In
+this case, the controller in the second process is a
+<a class="reference internal" href="#ceed.view.controller.ViewSideViewControllerBase" title="ceed.view.controller.ViewSideViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewSideViewControllerBase</span></code></a> instance while in the main GUI it
+is a <a class="reference internal" href="#ceed.view.controller.ControllerSideViewControllerBase" title="ceed.view.controller.ControllerSideViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ControllerSideViewControllerBase</span></code></a> instance. Data is constantly
+sent between the two processes, specifically, the second process is
+initialized with the data to be displayed at the start. Once the playing
+starts, the client continuously sends data back to the main GUI for
+processing and storage.</p>
+<p>This class controls all aspects of how the data is presented, e.g. whether
+the window is full screen, the various modes, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Events</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><cite>on_changed</cite>:</dt><dd><p>Triggered whenever a configuration option of the class is changed.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.LED_mode">
+<code class="sig-name descname">LED_mode</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.LED_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The LED mode the projector is set to during the experiment.
+Its value is from the <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.led_modes" title="ceed.view.controller.ViewControllerBase.led_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">led_modes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.LED_mode_idle">
+<code class="sig-name descname">LED_mode_idle</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.LED_mode_idle" title="Permalink to this definition">¶</a></dt>
+<dd><p>The LED mode the projector is set to before/after the experiment.
+Its value is from the <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.led_modes" title="ceed.view.controller.ViewControllerBase.led_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">led_modes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.add_graphics">
+<code class="sig-name descname">add_graphics</code><span class="sig-paren">(</span><em class="sig-param">canvas</em>, <em class="sig-param">black_back=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.add_graphics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds all the graphics required to visualize the shapes to the
+canvas.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.canvas_name">
+<code class="sig-name descname">canvas_name</code><em class="property"> = 'view_controller'</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.canvas_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name used to add graphics instructions to the kivy canvas for easy
+removal later by name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.count">
+<code class="sig-name descname">count</code><em class="property"> = 0</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current frame count.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.cpu_fps">
+<code class="sig-name descname">cpu_fps</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.cpu_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The estimated CPU frames-per-second of the window playing the data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.current_canvas">
+<code class="sig-name descname">current_canvas</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.current_canvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>The last canvas used on which the shapes graphics and color instructions
+was added.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.do_quad_mode">
+<code class="sig-name descname">do_quad_mode</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.do_quad_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the video mode is a quad mode. Read-only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.effective_frame_rate">
+<code class="sig-name descname">effective_frame_rate</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.effective_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The actual frame rate at which the projector is updated. E.g. in
+<code class="docutils literal notranslate"><span class="pre">'QUAD4X'</span></code> <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.video_mode" title="ceed.view.controller.ViewControllerBase.video_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">video_mode</span></code></a> it is updated at 4 * 120Hz = 480Hz.</p>
+<p>It is read only and automatically computed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.end_stage">
+<code class="sig-name descname">end_stage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.end_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the stage if one is playing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.flip_callback">
+<code class="sig-name descname">flip_callback</code><span class="sig-paren">(</span><em class="sig-param">*largs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.flip_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called before every GPU frame by the graphics system.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.flip_fps">
+<code class="sig-name descname">flip_fps</code><em class="property"> = 0</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.flip_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The GPU fps.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.frame_rate">
+<code class="sig-name descname">frame_rate</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The frame rate at which the data is played. This should match the
+currently selected monitor’s refresh rate.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.fullscreen">
+<code class="sig-name descname">fullscreen</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.fullscreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the second window should run in fullscreen mode. In fullscreen
+mode the window has no borders.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.get_all_shape_values">
+<code class="sig-name descname">get_all_shape_values</code><span class="sig-paren">(</span><em class="sig-param">frame_rate</em>, <em class="sig-param">stage_name=''</em>, <em class="sig-param">stage=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.get_all_shape_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>For every shape in the stage <code class="docutils literal notranslate"><span class="pre">stage_name</span></code> it samples the shape
+at the frame rate and returns a list of intensity values for the shape
+for each frame.
+frame_rate is not <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.frame_rate" title="ceed.view.controller.ViewControllerBase.frame_rate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code></a> bur rather the rate at which we
+sample the functions.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.gpu_fps">
+<code class="sig-name descname">gpu_fps</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.gpu_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The estimated GPU frames-per-second of the window playing the data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.led_modes">
+<code class="sig-name descname">led_modes</code><em class="property"> = {'B': 3, 'G': 5, 'GB': 1, 'R': 6, 'RB': 2, 'RG': 4, 'RGB': 0, 'none': 7}</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.led_modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color modes the PROPixx projector can be set to. It determines which
+of the RGB LEDs are turned OFF.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.output_count">
+<code class="sig-name descname">output_count</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.output_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the corner pixel is used to output frame information on the
+PROPixx controller IO pot. If True,
+<a class="reference internal" href="../storage/controller.html#ceed.storage.controller.DataSerializerBase" title="ceed.storage.controller.DataSerializerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.storage.controller.DataSerializerBase</span></code></a> is used to set the 24
+bits of the corner pixel.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.propixx_lib">
+<code class="sig-name descname">propixx_lib</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.propixx_lib" title="Permalink to this definition">¶</a></dt>
+<dd><p>True when the propixx python library is available. Read-only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.queue_view_read">
+<code class="sig-name descname">queue_view_read</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.queue_view_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>The queue used by the view side to receive messages from the main GUI
+controller side.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.queue_view_write">
+<code class="sig-name descname">queue_view_write</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.queue_view_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>The queue used by the view side to write messages to the main GUI
+controller side.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.request_process_data">
+<code class="sig-name descname">request_process_data</code><span class="sig-paren">(</span><em class="sig-param">data_type</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.request_process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the client that displays the shapes when it needs to
+update the controller with some data.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.screen_height">
+<code class="sig-name descname">screen_height</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.screen_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>The screen height on which the data is played. This is the full-screen
+size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.screen_offset_x">
+<code class="sig-name descname">screen_offset_x</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.screen_offset_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>When there are multiple monitors, the window on which the data is played
+is controlled by the position of the screen. E.g. to set it on the right
+screen of two screens, each 1920 pixel wide and with the main screen being
+on the left. Then the <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.screen_offset_x" title="ceed.view.controller.ViewControllerBase.screen_offset_x"><code class="xref py py-attr docutils literal notranslate"><span class="pre">screen_offset_x</span></code></a> should be set to <code class="docutils literal notranslate"><span class="pre">1920</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.screen_width">
+<code class="sig-name descname">screen_width</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.screen_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>The screen width on which the data is played. This is the full-screen
+size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.serializer">
+<code class="sig-name descname">serializer</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.serializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="xref py py-meth docutils literal notranslate"><span class="pre">ceed.storage.controller.DataSerializerBase.get_bits()</span></code>
+generator instance that generates the corner pixel value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.serializer_tex">
+<code class="sig-name descname">serializer_tex</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.serializer_tex" title="Permalink to this definition">¶</a></dt>
+<dd><p>The kivy texture that displays the corner pixel value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.shape_views">
+<code class="sig-name descname">shape_views</code><em class="property"> = []</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.shape_views" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of kivy graphics instructions added to the <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.current_canvas" title="ceed.view.controller.ViewControllerBase.current_canvas"><code class="xref py py-attr docutils literal notranslate"><span class="pre">current_canvas</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.stage_active">
+<code class="sig-name descname">stage_active</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.stage_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>True when a stage is playing. Read-only.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.start_stage">
+<code class="sig-name descname">start_stage</code><span class="sig-paren">(</span><em class="sig-param">stage_name</em>, <em class="sig-param">canvas</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.start_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the stage. It adds the graphics instructions to the canvas
+and starts playing the shapes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewControllerBase.tick_callback">
+<code class="sig-name descname">tick_callback</code><span class="sig-paren">(</span><em class="sig-param">*largs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.tick_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called before every CPU frame to handle any processing work.</p>
+<p>When graphics need to be updated this method will update them</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.tick_delay_event">
+<code class="sig-name descname">tick_delay_event</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.tick_delay_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>The delay event that triggers tick_event after an initial delay to
+ensure everything is ready before we start showing actual frames.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.tick_event">
+<code class="sig-name descname">tick_event</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.tick_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>The kivy clock event that updates the colors on every frame.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.tick_func">
+<code class="sig-name descname">tick_func</code><em class="property"> = None</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.tick_func" title="Permalink to this definition">¶</a></dt>
+<dd><p>The iterator that updates the colors on every frame.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.use_software_frame_rate">
+<code class="sig-name descname">use_software_frame_rate</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.use_software_frame_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Depending on the GPU, the software is unable to render faster than the
+GPU refresh rate. In that case, <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.frame_rate" title="ceed.view.controller.ViewControllerBase.frame_rate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code></a>, should match the value
+that the GPU is playing at and this should be False.</p>
+<p>If the GPU isn’t forcing a frame rate. Then this should be True and
+<a class="reference internal" href="#ceed.view.controller.ViewControllerBase.frame_rate" title="ceed.view.controller.ViewControllerBase.frame_rate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code></a> should be the desired frame rate.</p>
+<p>One can tell whether the GPU is forcing a frame rate by setting
+<a class="reference internal" href="#ceed.view.controller.ViewControllerBase.frame_rate" title="ceed.view.controller.ViewControllerBase.frame_rate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">frame_rate</span></code></a> to a large value and setting
+<a class="reference internal" href="#ceed.view.controller.ViewControllerBase.use_software_frame_rate" title="ceed.view.controller.ViewControllerBase.use_software_frame_rate"><code class="xref py py-attr docutils literal notranslate"><span class="pre">use_software_frame_rate</span></code></a> to False and seeing what the resultant
+frame rate is. If it isn’t capped at some value, e.g. 120Hz, it means that
+the GPU isn’t forcing it.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.video_mode">
+<code class="sig-name descname">video_mode</code><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.video_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current video mode from the <a class="reference internal" href="#ceed.view.controller.ViewControllerBase.video_modes" title="ceed.view.controller.ViewControllerBase.video_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">video_modes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ViewControllerBase.video_modes">
+<code class="sig-name descname">video_modes</code><em class="property"> = ['RGB', 'RB3D', 'RGB240', 'RGB180', 'QUAD4X', 'QUAD12X', 'GREY3X']</em><a class="headerlink" href="#ceed.view.controller.ViewControllerBase.video_modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The video modes that the PROPixx projector can be set to.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.view.controller.ViewSideViewControllerBase">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.view.controller.</code><code class="sig-name descname">ViewSideViewControllerBase</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ceed.view.controller.ViewControllerBase" title="ceed.view.controller.ViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.view.controller.ViewControllerBase</span></code></a></p>
+<p>The instance that is created on the viewer side.</p>
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.end_stage">
+<code class="sig-name descname">end_stage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.end_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the stage if one is playing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.handle_exception">
+<code class="sig-name descname">handle_exception</code><span class="sig-paren">(</span><em class="sig-param">exception</em>, <em class="sig-param">exc_info=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.handle_exception" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the second process upon an error which is passed on to the
+main process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.prepare_view_window">
+<code class="sig-name descname">prepare_view_window</code><span class="sig-paren">(</span><em class="sig-param">*largs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.prepare_view_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called before the app is run to prepare the app according to the
+configuration parameters.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.request_process_data">
+<code class="sig-name descname">request_process_data</code><span class="sig-paren">(</span><em class="sig-param">data_type</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.request_process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the client that displays the shapes when it needs to
+update the controller with some data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.send_keyboard_down">
+<code class="sig-name descname">send_keyboard_down</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">modifiers</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.send_keyboard_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets called by the window for every keyboard key press, which it
+passes on to the main GUI process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.send_keyboard_up">
+<code class="sig-name descname">send_keyboard_up</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.send_keyboard_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets called by the window for every keyboard key release, which it
+passes on to the main GUI process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.start_stage">
+<code class="sig-name descname">start_stage</code><span class="sig-paren">(</span><em class="sig-param">stage_name</em>, <em class="sig-param">canvas</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.start_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the stage. It adds the graphics instructions to the canvas
+and starts playing the shapes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ViewSideViewControllerBase.view_read">
+<code class="sig-name descname">view_read</code><span class="sig-paren">(</span><em class="sig-param">*largs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ViewSideViewControllerBase.view_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Communication between the two process occurs through queues, this
+is run periodically to serve the queue and read messages from the main
+GUI.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ceed.view.controller.view_process_enter">
+<code class="sig-prename descclassname">ceed.view.controller.</code><code class="sig-name descname">view_process_enter</code><span class="sig-paren">(</span><em class="sig-param">read</em>, <em class="sig-param">write</em>, <em class="sig-param">settings</em>, <em class="sig-param">app_settings</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.view_process_enter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the second internal view process when it is created.
+This calls <code class="xref py py-meth docutils literal notranslate"><span class="pre">ViewSideViewControllerBase.view_process_enter()</span></code>.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase">
+<em class="property">class </em><code class="sig-prename descclassname">ceed.view.controller.</code><code class="sig-name descname">ControllerSideViewControllerBase</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ceed.view.controller.ViewControllerBase" title="ceed.view.controller.ViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ceed.view.controller.ViewControllerBase</span></code></a></p>
+<p>The instance that is created in the main GUI.</p>
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.add_graphics">
+<code class="sig-name descname">add_graphics</code><span class="sig-paren">(</span><em class="sig-param">canvas</em>, <em class="sig-param">black_back=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.add_graphics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds all the graphics required to visualize the shapes to the
+canvas.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.controller_read">
+<code class="sig-name descname">controller_read</code><span class="sig-paren">(</span><em class="sig-param">*largs</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.controller_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called periodically to serve the queue that receives messages from
+the second process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.end_stage">
+<code class="sig-name descname">end_stage</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.end_stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the stage if one is playing.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.finish_stop_process">
+<code class="sig-name descname">finish_stop_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.finish_stop_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by by the read queue thread when we receive the message that
+the second process received an EOF and that it stopped.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.handle_key_press">
+<code class="sig-name descname">handle_key_press</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">modifiers=[]</em>, <em class="sig-param">down=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.handle_key_press" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by by the read queue thread when we receive a keypress
+event from the second process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.request_fullscreen">
+<code class="sig-name descname">request_fullscreen</code><span class="sig-paren">(</span><em class="sig-param">state</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.request_fullscreen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the fullscreen state to full or not of the second internal
+view process.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.request_process_data">
+<code class="sig-name descname">request_process_data</code><span class="sig-paren">(</span><em class="sig-param">data_type</em>, <em class="sig-param">data</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.request_process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the client that displays the shapes when it needs to
+update the controller with some data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.request_stage_end">
+<code class="sig-name descname">request_stage_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.request_stage_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the stage either in the GUI when previewing or in the
+viewer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.request_stage_start">
+<code class="sig-name descname">request_stage_start</code><span class="sig-paren">(</span><em class="sig-param">stage_name</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.request_stage_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the stage either in the GUI when previewing or in the
+viewer.</p>
+<p>Look into immediately erroring out if already running. So that we
+don’t overwrite the initial image if we’re already running.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.selected_stage_name">
+<code class="sig-name descname">selected_stage_name</code><em class="property"> = ''</em><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.selected_stage_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the stage currently selected in the GUI. This will be the
+one started.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.set_led_mode">
+<code class="sig-name descname">set_led_mode</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.set_led_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the projector’s LED mode. <code class="docutils literal notranslate"><span class="pre">mode</span></code> can be one of
+<a class="reference internal" href="#ceed.view.controller.ViewControllerBase.led_modes" title="ceed.view.controller.ViewControllerBase.led_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ViewControllerBase.led_modes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.set_video_mode">
+<code class="sig-name descname">set_video_mode</code><span class="sig-paren">(</span><em class="sig-param">mode</em><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.set_video_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the projector’s video mode. <code class="docutils literal notranslate"><span class="pre">mode</span></code> can be one of
+<a class="reference internal" href="#ceed.view.controller.ViewControllerBase.video_modes" title="ceed.view.controller.ViewControllerBase.video_modes"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ViewControllerBase.video_modes</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.start_process">
+<code class="sig-name descname">start_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.start_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts the process of the internal window that runs the experiment
+through a <a class="reference internal" href="#ceed.view.controller.ViewSideViewControllerBase" title="ceed.view.controller.ViewSideViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewSideViewControllerBase</span></code></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.stop_process">
+<code class="sig-name descname">stop_process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.stop_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends the <a class="reference internal" href="#ceed.view.controller.ControllerSideViewControllerBase.view_process" title="ceed.view.controller.ControllerSideViewControllerBase.view_process"><code class="xref py py-class docutils literal notranslate"><span class="pre">view_process</span></code></a> process by sending a EOF to
+the second process.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ceed.view.controller.ControllerSideViewControllerBase.view_process">
+<code class="sig-name descname">view_process</code><a class="headerlink" href="#ceed.view.controller.ControllerSideViewControllerBase.view_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Process of the internal window that runs the experiment through
+a <a class="reference internal" href="#ceed.view.controller.ViewSideViewControllerBase" title="ceed.view.controller.ViewSideViewControllerBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">ViewSideViewControllerBase</span></code></a>.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="main.html" class="btn btn-neutral float-right" title="Ceed View App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="view_widgets.html" class="btn btn-neutral float-left" title="Viewer widgets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Matthew Einhorn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
